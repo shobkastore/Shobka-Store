@@ -14,7 +14,7 @@ export default function Home() {
         {/* Logo */}
         <div className="flex justify-center mb-1 animate-bounce-slow">
           <Image 
-            src="/ShobkaRbg.png" 
+            src="/ShobkaWbg.png" 
             alt="Shobka Store Logo" 
             width={140} 
             height={140} 
