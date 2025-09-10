@@ -4,9 +4,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin", "arabic"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin", "arabic"] });
 
-export const metadataBase = new URL("https://shobkastore.vercel.app");
-
 export const metadata = {
+  metadataBase: new URL("https://shobkastore.vercel.app"),
   title: "Shobka Store",
   description: "Shobka Store offers a unique shopping experience. High-quality products with fast and free delivery, cash on delivery.",
   keywords: [
@@ -20,7 +19,7 @@ export const metadata = {
     description: "Explore high-quality products at Shobka Store with fast and free delivery, cash on delivery.",
     url: "https://shobkastore.vercel.app",
     siteName: "Shobka Store",
-    images: [{ url: "/LogoStr.jpg", width: 800, height: 600, alt: "Shobka Store Logo" }],
+    images: [{ url: "https://shobkastore.vercel.app/LogoStr.jpg", width: 800, height: 600, alt: "Shobka Store Logo" }],
     locale: "en_US",
     type: "website",
   },
@@ -28,7 +27,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Shobka Store",
     description: "Explore high-quality products at Shobka Store with fast and free delivery, cash on delivery.",
-    images: ["/LogoStr.jpg"],
+    images: ["https://shobkastore.vercel.app/LogoStr.jpg"],
   },
   alternates: {
     canonical: "https://shobkastore.vercel.app",
@@ -46,7 +45,7 @@ export const metadata = {
 
 export default function RootLayout({ children, lang = "en" }) {
   return (
-    <html lang={lang}>
+    <html lang={lang} dir={lang === "ar" ? "rtl" : "ltr"}>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
