@@ -24,7 +24,7 @@ export const metadata = {
   openGraph: {
     title: "Shobka Store",
     description: "Explore high-quality products at Shobka Store with fast and free delivery, and cash on delivery.",
-    url: "https://shobkastore.com",
+    url: "https://shobkastore.vercel.app",
     siteName: "Shobka Store",
     images: [
       {

@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://shobkastore.vercel.app
+
+# Sitemaps
+Sitemap: https://shobkastore.vercel.app/sitemap.xml

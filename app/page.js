@@ -1,8 +1,22 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-blue-500 via-orange-400 to-purple-500 text-white flex flex-col justify-center items-center overflow-hidden px-4">
+
+      {/* Language Switcher (Saudi Flag) */}
+      <div className="absolute top-5 right-5 z-20">
+        <Link href="/ar">
+          <Image
+            src="/saudi-flag.png" // ضع صورة علم السعودية في public/saudi-flag.png
+            alt="العربية"
+            width={40}
+            height={40}
+            className="rounded-md border border-white shadow-md cursor-pointer hover:scale-110 transition-transform"
+          />
+        </Link>
+      </div>
 
       {/* Animated background shapes */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse-slow"></div>
