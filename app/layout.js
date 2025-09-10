@@ -1,54 +1,53 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Geist, Geist_Mono } from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin", "arabic"] });
+const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin", "arabic"] });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+export const metadataBase = new URL("https://shobkastore.vercel.app");
 
 export const metadata = {
   title: "Shobka Store",
-  description: "Shobka Store offers a unique shopping experience. Explore high-quality products with fast and free delivery, and cash on delivery.",
-  keywords: ["Shobka Store", "Shopping", "High-Quality Products", "Fast Delivery", "Cash on Delivery", "Online Store",
-  "شوبكا ستور", "تسوق", "منتجات عالية الجودة", "توصيل سريع", "الدفع عند الاستلام", "متجر إلكتروني"
+  description: "Shobka Store offers a unique shopping experience. High-quality products with fast and free delivery, cash on delivery.",
+  keywords: [
+    "Shobka Store", "Shopping", "High-Quality Products", "Fast Delivery", "Cash on Delivery", "Online Store",
+    "شوبكا ستور", "تسوق", "منتجات عالية الجودة", "توصيل سريع", "الدفع عند الاستلام", "متجر إلكتروني"
   ],
   author: "Shobka Store",
-  icons: {
-    icon: "/LogoStr.jpg",
-  },
+  icons: { icon: "/LogoStr.jpg" },
   openGraph: {
     title: "Shobka Store",
-    description: "Explore high-quality products at Shobka Store with fast and free delivery, and cash on delivery.",
+    description: "Explore high-quality products at Shobka Store with fast and free delivery, cash on delivery.",
     url: "https://shobkastore.vercel.app",
     siteName: "Shobka Store",
-    images: [
-      {
-        url: "/LogoStr.jpg",
-        width: 800,
-        height: 600,
-      },
-    ],
+    images: [{ url: "/LogoStr.jpg", width: 800, height: 600, alt: "Shobka Store Logo" }],
     locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Shobka Store",
+    description: "Explore high-quality products at Shobka Store with fast and free delivery, cash on delivery.",
+    images: ["/LogoStr.jpg"],
+  },
+  alternates: {
+    canonical: "https://shobkastore.vercel.app",
+    languages: {
+      "en": "https://shobkastore.vercel.app",
+      "ar": "https://shobkastore.vercel.app/ar",
+    },
   },
   social: {
     facebook: "https://web.facebook.com/profile.php?id=61580281476906",
     instagram: "https://instagram.com/shobkastore",
+    twitter: "https://x.com/shobkastore",
   },
 };
 
-
-export default function RootLayout({ children }) {
+export default function RootLayout({ children, lang = "en" }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang={lang}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
     </html>
