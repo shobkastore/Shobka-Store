@@ -6,7 +6,7 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin",
 
 export const metadata = {
   metadataBase: new URL("https://shobkastore.vercel.app"),
-  title: "Shobka Store",
+  title: "Shobka Store - شوبكا ستور",
   description: "Shobka Store offers a unique shopping experience. High-quality products with fast and free delivery, cash on delivery.",
   keywords: [
     "Shobka Store", "Shopping", "High-Quality Products", "Fast Delivery", "Cash on Delivery", "Online Store",
