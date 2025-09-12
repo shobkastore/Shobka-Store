@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-
 export const metadata = {
   title: "شوبكا ستور",
   description: "شوبكا ستور يقدم تجربة تسوق فريدة مع منتجات عالية الجودة، توصيل سريع ومجاني والدفع عند الاستلام.",
@@ -11,7 +10,6 @@ export const metadata = {
   ],
   author: "شوبكا ستور",
 };
-
 
 export default function Home() {
   return (
@@ -44,12 +42,41 @@ export default function Home() {
         </p>
 
         <a href="https://shobkastore.com" target="_blank" className="inline-block px-10 py-4 bg-blue-600 text-white font-bold rounded-full text-lg shadow-lg transform transition-transform hover:scale-105 hover:bg-blue-700">
-          اذهب إلى المتجر
+          اضغط هنا للذهاب إلى المتجر
         </a>
 
-        <div className="mt-10 text-white/80 animate-fadeIn delay-200">
-          <p>البريد الإلكتروني: <a href="mailto:shobkastore@gmail.com" className="underline">shobkastore@gmail.com</a></p>
-        </div>
+        {/* Social Media Links */}
+       <div className="mt-8 flex flex-wrap justify-center items-center gap-4 animate-fadeIn delay-300">
+         <a href="mailto:shobkastore@gmail.com" target="_blank" className="transform hover:scale-110 transition-transform">
+           <Image src="/Icons/gmail.png" alt="Gmail" width={40} height={40} className="rounded-lg" />
+         </a>
+         <a href="https://x.com/shobkastore" target="_blank" className="transform hover:scale-110 transition-transform">
+           <Image src="/Icons/twit.svg" alt="X / Twitter" width={40} height={40} />
+         </a>
+         <a href="https://www.youtube.com/@ShobkaStore" target="_blank" className="transform hover:scale-110 transition-transform">
+           <Image src="/Icons/yt.svg" alt="YouTube" width={40} height={40} />
+         </a>
+         <a href="https://www.instagram.com/shobkastore" target="_blank" className="transform hover:scale-110 transition-transform">
+           <Image src="/Icons/ins.svg" alt="Instagram" width={40} height={40} />
+         </a>
+         <a href="https://www.facebook.com/profile.php?id=61580281476906" target="_blank" className="transform hover:scale-110 transition-transform bg-white rounded-full">
+            <Image src="/Icons/fb.svg" alt="Facebook" width={60} height={60} />
+          </a>
+          <a href="https://www.tiktok.com/@shobka.store" target="_blank" className="transform hover:scale-110 transition-transform">
+           <Image src="/Icons/tik.svg" alt="TikTok" width={40} height={40} />
+         </a>
+         <a href="https://www.snapchat.com/add/shobkastore?share_id=iDiIFGbr1Ss&locale=en-GB" target="_blank" className="transform hover:scale-110 transition-transform">
+           <Image src="/Icons/snap.svg" alt="Snapchat" width={40} height={40} />
+         </a>
+         <a href="https://www.threads.com/@shobkastore" target="_blank" className="transform hover:scale-110 transition-transform">
+           <Image src="/Icons/threads.png" alt="Threads" width={40} height={40} />
+         </a>
+         <a href="https://www.linkedin.com/in/shobkastore" target="_blank" className="relative transform hover:scale-110 transition-transform">
+            <Image src="/Icons/link.svg" alt="LinkedIn" className="absolute" width={40} height={40} />
+            <div className="bg-white w-8 h-8 m-1  "></div>
+          </a>
+       </div>
+
       </div>
     </div>
   );
